@@ -52,6 +52,25 @@ def inspect_file(path) -> None:
     print(f" - {torchaudio.info(path)}")
 
 
+def get_audio_tensor(file_path: str) -> tuple[torch.Tensor, int]:
+    """Returns the audio file as a Pytorch Tensor
+
+    Parameters
+    ----------
+    file_path : str
+        file path to the audio file
+
+    Returns
+    -------
+    tuple[torch.Tensor, int]
+        Returns the audio waveform as a Tensor and the sample rate as an integer
+    """
+    if not is_sound_file(file_path):
+        return None
+    waveform, sample_rate = torchaudio.load(file_path)
+    return waveform, sample_rate
+
+
 def is_sound_file(file_path: str) -> bool:
     """Returns True if the file is a sound file
 
