@@ -1,2 +1,5 @@
 # Ignore Sound Files
 *.wav
+
+# Ignore Dirty Apple Files
+.DS_Store
