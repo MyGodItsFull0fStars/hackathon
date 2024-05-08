@@ -1,0 +1,11 @@
+name: hackathon
+channels:
+  - defaults
+  - pytorch
+dependencies:
+  - anaconda
+  - python=3.12
+  - pytorch
+  - torchaudio
+  - torchvision
+
