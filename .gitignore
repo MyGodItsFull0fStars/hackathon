@@ -3,3 +3,6 @@
 
 # Ignore Dirty Apple Files
 .DS_Store
+
+# Ignore Compiled Python Files
+*.pyc
